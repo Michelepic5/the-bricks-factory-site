@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #1a1a1a;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        .loading-container {
+            display: flex;
+            font-size: 4em;
+            color: #fff;
+            perspective: 1000px;
+        }
+        .loading-container span {
+            display: inline-block;
+            margin: 0 5px;
+            animation: bounce 1.5s infinite ease-in-out;
+            transform-origin: bottom;
+        }
+        .loading-container span:nth-child(1) { animation-delay: 0s; }
+        .loading-container span:nth-child(2) { animation-delay: 0.1s; }
+        .loading-container span:nth-child(3) { animation-delay: 0.2s; }
+        .loading-container span:nth-child(4) { animation-delay: 0.3s; }
+        .loading-container span:nth-child(5) { animation-delay: 0.4s; }
+        .loading-container span:nth-child(6) { animation-delay: 0.5s; }
+        .loading-container span:nth-child(7) { animation-delay: 0.6s; }
+
+        @keyframes bounce {
+            0%, 100% { 
+                transform: translateY(0) scaleY(1); 
+                color: #fff;
+            }
+            50% { 
+                transform: translateY(-30px) scaleY(1.1); 
+                color: #4CAF50;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <span>L</span>
+        <span>O</span>
+        <span>A</span>
+        <span>D</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
+    </div>
+</body>
+</html>
